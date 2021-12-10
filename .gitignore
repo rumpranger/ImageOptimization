@@ -1,0 +1,4 @@
+dist/*.zip
+lambda/*/node_modules
+lambda/*/package*.json
+

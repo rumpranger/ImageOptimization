@@ -1,0 +1,30 @@
+{
+    "Id": "Policy1607439516050",
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1607438473027",
+        "Action": [
+          "s3:DeleteObject",
+          "s3:GetObject",
+          "s3:PutObject"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::SOURCE.BUCKET.NAME/*",
+        "Principal": {
+          "AWS": [
+            "arn:aws:iam::535111433340:role/SOURCE.BUCKET.NAME-webp-resize-WebEdgeLambdaRole-SM7SFKTZ39ZH"
+          ]
+        }
+      },
+      {
+        "Sid": "Stmt1607438881832",
+        "Action": [
+          "s3:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::SOURCE.BUCKET.NAME/*",
+        "Principal": "*"
+      }
+    ]
+  }
